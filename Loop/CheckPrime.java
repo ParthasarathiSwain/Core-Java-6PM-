@@ -4,7 +4,6 @@ class CheckPrime{
 	Scanner sc=new Scanner(System.in);
 	System.out.println("Enter a number : ");
 	int n=sc.nextInt();
-
 	int i=2;
 	int count=0;
 
