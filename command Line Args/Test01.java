@@ -11,12 +11,12 @@ class Test01{
 		//System.out.println("s2 : "+s2);
 		//System.out.println("Result : "+result);
 
-		String s1=a[0];
-		float f1=Float.parseFloat(s1);
-		String s2=a[1];
-		float f2=Float.parseFloat(s2);
-		float f3=f1+f2;
-		System.out.println("F3 : "+f3);
+		//String s1=a[0];
+		//float f1=Float.parseFloat(s1);
+		//String s2=a[1];
+		//float f2=Float.parseFloat(s2);
+		//float f3=f1+f2;
+		//System.out.println("F3 : "+f3);
 
 		
 	}
