@@ -1,3 +1,6 @@
+class GrandParent{
+
+}
 class Parent{  //parent cls,super cls,base cls
 	int x=90;
 	public void m(){

@@ -1,0 +1,39 @@
+class Vehicle{
+	static int y=80;
+        static int x;
+	static{
+		x=90;
+		System.out.println("Vehicle class Static block");
+	}
+}
+class Car extends Vehicle{
+	Engine eng;
+	Car(){
+		eng=new Engine();
+	}
+	public void startButton(){
+	    eng.start();
+	    System.out.println("Car is running ");
+	}
+	public static void main(String args[]){
+		Car bmw=new Car();
+		bmw.startButton();
+		
+
+	}
+}
+class Engine{
+	
+	public void start(){
+		Petrol p=new Petrol();
+		p.consume();
+		System.out.println("Engine Start ");
+	}
+}
+class Petrol{
+	double petrol=5.00d;
+	public void consume(){
+		System.out.println("Petrol consuming stated "+petrol);
+	}
+}
+
