@@ -1,0 +1,306 @@
+
+
+1. Static Block Execution
+--------------------------------------------------
+class A {
+    static { System.out.println("A static"); }
+}
+class B extends A {
+    static { System.out.println("B static"); }
+    public static void main(String[] args) {
+        System.out.println("Main method");
+    }
+}
+Q1. What will be the output?
+
+2. Constructor Chaining
+--------------------------------------------------
+class A {
+    A() { System.out.println("A constructor"); }
+}
+class B extends A {
+    B() { System.out.println("B constructor"); }
+    public static void main(String[] args) {
+        B obj = new B();
+    }
+}
+Q2. What will be the output when object is created?
+
+3. Method Overriding
+--------------------------------------------------
+class Parent {
+    void show() { System.out.println("Parent"); }
+}
+class Child extends Parent {
+    void show() { System.out.println("Child"); }
+    public static void main(String[] args) {
+        Parent p = new Child();
+        p.show();
+    }
+}
+Q3. What will be the output?
+
+4. Final Method
+--------------------------------------------------
+class A {
+    final void display() {
+        System.out.println("Final Method");
+    }
+}
+class B extends A {
+    // void display() {} // Error
+    public static void main(String[] args) {
+        new B().display();
+    }
+}
+Q4. What happens if display() is uncommented in B?
+
+5. Static Method Hiding
+--------------------------------------------------
+class A {
+    static void print() {
+        System.out.println("A static");
+    }
+}
+class B extends A {
+    static void print() {
+        System.out.println("B static");
+    }
+    public static void main(String[] args) {
+        A obj = new B();
+        obj.print();
+    }
+}
+Q5. What will be printed?
+
+6. Access Modifiers
+--------------------------------------------------
+class A {
+    protected void greet() {
+        System.out.println("Hello from A");
+    }
+}
+class B extends A {
+    public static void main(String[] args) {
+        new B().greet();
+    }
+}
+Q6. Will this compile and run successfully?
+
+7. Instance Block Execution
+--------------------------------------------------
+class A {
+    { System.out.println("A instance block"); }
+}
+class B extends A {
+    { System.out.println("B instance block"); }
+    public static void main(String[] args) {
+        new B();
+    }
+}
+Q7. What is the order of instance block execution?
+
+8. Super Keyword
+--------------------------------------------------
+class A {
+    String name = "Parent";
+}
+class B extends A {
+    String name = "Child";
+    void print() {
+        System.out.println(super.name);
+    }
+    public static void main(String[] args) {
+        new B().print();
+    }
+}
+Q8. What is the output?
+
+9. Final Class
+--------------------------------------------------
+final class A {
+    void test() { System.out.println("Test method"); }
+}
+// class B extends A {} // Error
+class Main {
+    public static void main(String[] args) {
+        new A().test();
+    }
+}
+Q9. What happens if class B tries to extend A?
+
+10. Constructor with Parameters
+--------------------------------------------------
+class A {
+    A(int x) {
+        System.out.println("A: " + x);
+    }
+}
+class B extends A {
+    B() {
+        super(10);
+        System.out.println("B");
+    }
+    public static void main(String[] args) {
+        new B();
+    }
+}
+Q10. What is the output?
+
+11. Static Variable in Inheritance
+--------------------------------------------------
+class A {
+    static int count = 0;
+}
+class B extends A {
+    public static void main(String[] args) {
+        B.count = 10;
+        System.out.println(A.count);
+    }
+}
+Q11. What is the output?
+
+12. Constructor Execution Order
+--------------------------------------------------
+class X {
+    X() {
+        System.out.println("X constructor");
+    }
+}
+class Y extends X {
+    Y() {
+        System.out.println("Y constructor");
+    }
+}
+class Z extends Y {
+    Z() {
+        System.out.println("Z constructor");
+    }
+    public static void main(String[] args) {
+        new Z();
+    }
+}
+Q12. What is the output order?
+
+13. Method Not Overridden
+--------------------------------------------------
+class A {
+    void run() {
+        System.out.println("Running A");
+    }
+}
+class B extends A {
+}
+class Main {
+    public static void main(String[] args) {
+        B b = new B();
+        b.run();
+    }
+}
+Q13. What is the output?
+
+14. Using this() and super()
+--------------------------------------------------
+class A {
+    A() {
+        System.out.println("A Constructor");
+    }
+}
+class B extends A {
+    B() {
+        this(10);
+        System.out.println("B Constructor");
+    }
+    B(int x) {
+        super();
+        System.out.println("B Parameterized");
+    }
+    public static void main(String[] args) {
+        new B();
+    }
+}
+Q14. What is the order of execution?
+
+15. Calling Private Method
+--------------------------------------------------
+class A {
+    private void secret() {
+        System.out.println("Secret in A");
+    }
+}
+class B extends A {
+    public static void main(String[] args) {
+        B b = new B();
+        // b.secret(); // Compile-time error
+    }
+}
+Q15. Will calling secret() from B work?
+
+16. Inheritance without Object
+--------------------------------------------------
+class A {
+    static { System.out.println("Static A"); }
+}
+class B extends A {
+    static { System.out.println("Static B"); }
+    public static void main(String[] args) { }
+}
+Q16. What gets printed without object creation?
+
+17. Final Variable
+--------------------------------------------------
+class A {
+    final int x = 10;
+}
+class B extends A {
+    void show() {
+        // x = 20; // Error
+        System.out.println(x);
+    }
+}
+Q17. Can x be modified in B?
+
+18. Static Initialization with Inheritance
+--------------------------------------------------
+class A {
+    static int x = 10;
+}
+class B extends A {
+    static {
+        x = 20;
+    }
+    public static void main(String[] args) {
+        System.out.println(A.x);
+    }
+}
+Q18. What is the output?
+
+19. Overloading vs Overriding
+--------------------------------------------------
+class A {
+    void show() { System.out.println("A"); }
+}
+class B extends A {
+    void show(String s) { System.out.println("B"); }
+}
+class Test {
+    public static void main(String[] args) {
+        new B().show();
+    }
+}
+Q19. Which method gets called?
+
+20. Access Modifier (default)
+--------------------------------------------------
+class A {
+    void display() { // default access
+        System.out.println("A");
+    }
+}
+class B extends A {
+    public static void main(String[] args) {
+        B b = new B();
+        b.display();
+    }
+}
+Q20. Will this run if classes are in the same package?

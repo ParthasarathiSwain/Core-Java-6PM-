@@ -1,0 +1,49 @@
+==========================================
+JAVA INHERITANCE & OOP RELATIONSHIPS OVERVIEW
+==========================================
+
+1. What is Inheritance?
+-----------------------
+Inheritance allows a child class to reuse fields and methods of a parent class,
+promoting code reusability and hierarchical class organization.
+
+2. OOP Relationships: IS-A, HAS-A, USES-A
+-----------------------------------------
+- IS-A (Inheritance): Subclass **is a** type of superclass.
+  Example: Dog IS-A Animal
+- HAS-A (Composition): Class **has a** reference to another class.
+  Example: Car HAS-A Engine
+- USES-A (Dependency): Class **uses** another class temporarily.
+  Example: Driver USES-A Car to drive
+
+3. Types of Inheritance with Diagrams
+-------------------------------------
+
+a) Single Inheritance  
+Animal  
+  ↑  
+ Dog
+
+b) Multilevel Inheritance  
+Animal  
+  ↑  
+ Dog  
+  ↑  
+ Puppy
+
+c) Hierarchical Inheritance  
+       Animal  
+      /     \  
+    Dog     Cat
+
+d) Multiple Inheritance (via Interfaces)  
+```java
+interface Printable { void print(); }
+interface Showable { void show(); }
+class Demo implements Printable, Showable {
+  public void print() { System.out.println("Print"); }
+  public void show() { System.out.println("Show"); }
+}
+
+
+

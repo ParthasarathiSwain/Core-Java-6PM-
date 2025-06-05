@@ -1,0 +1,41 @@
+🔥 20 Java Inheritance Coding Questions
+----------------------------------------
+1-Create a class Person with name and age. Create a subclass Employee with employeeId and salary. Print all details using constructor.
+
+2-Create a class Animal with a method makeSound(). Create a subclass Dog that overrides this method to print "Bark".
+
+3-Create a class Vehicle with attributes brand and speed. Create a subclass Bike that adds type. Print all details.
+
+4-Create a base class Shape with method area(). Create a subclass Circle that calculates area using radius.
+
+5-Create a class Account with accountNo and balance. Create a subclass SavingAccount with interestRate. Display account details.
+
+6-Create a class Employee with name and salary. Create a subclass Manager with department. Use constructors and print all info.
+
+7-Create a class Book with title and author. Create a subclass Ebook with fileSize. Create an object and display info.
+
+8-Create a class Appliance with brand and power. Create a subclass WashingMachine with capacity. Show the inheritance.
+
+9-Create a class Computer with brand and RAM. Create a subclass Laptop with battery life. Print laptop details.
+
+10-Create a class Course with courseName and duration. Create a subclass OnlineCourse with platform name. Show all details.
+
+11-Create a base class User with username and email. Create a subclass Admin with adminLevel. Display admin details.
+
+12-Create a class Building with floors and location. Create a subclass Office with number of employees. Use constructor to display.
+
+13-Create a class Movie with name and director. Create a subclass ActionMovie with stuntCount. Display full movie info.
+
+14-Create a class Fruit with name and color. Create a subclass Citrus with vitaminC content. Print all info.
+
+15-Create a class Instrument with type and brand. Create a subclass Guitar with number of strings. Print guitar details.
+
+16-Create a class Exam with subject and totalMarks. Create a subclass PracticalExam with labNumber. Display all info.
+
+17-Create a class Employee and a subclass Developer with programmingLanguage attribute. Show employee details.
+
+18-Create a class Product with id and price. Create a subclass Electronic with warrantyPeriod. Print complete details.
+
+19-Create a class Animal and create another subclass Cat with a method to print "Meow". Use method overriding.
+
+20-Create a class Vehicle, and a subclass Car and another subclass Truck. Show multilevel inheritance with details.
