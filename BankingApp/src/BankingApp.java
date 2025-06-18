@@ -26,9 +26,12 @@ public class BankingApp {
 				
 				System.out.println("Enter 4-Digit Pin :");
 				String pin=sc.nextLine();
-				//Check user exist or not
-				//if user not present show login failed message
-				//if user present then enter into the account
+				BankAccount  userAcc=bank.login(accNo, pin);
+				if (userAcc!=null) {
+					System.out.println("Login Successfully !");
+				} else {
+					System.out.println("Login Failed!");
+				}
 				int opt;
 				while(true) {
 					System.out.println("1- Deposite");

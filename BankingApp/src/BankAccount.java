@@ -35,5 +35,12 @@ public class BankAccount  implements BankOperation{
 			transcationHistory[taxCount]=message;
 		}
 	}
+	@Override
+	public boolean checkUserExist(String accNum, String pin) {
+		if (this.active && this.accNumber.equals(accNum) && this.pin.equals(pin)) {
+			return true;
+		}
+		return false;
+	}
 	
 }
