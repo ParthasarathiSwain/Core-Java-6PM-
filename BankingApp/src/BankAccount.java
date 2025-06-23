@@ -1,4 +1,4 @@
-import java.util.Scanner;
+
 
 public class BankAccount  implements BankOperation{
 	private String accNumber;
@@ -7,7 +7,7 @@ public class BankAccount  implements BankOperation{
 	private double balance;
 	private boolean active;
 	private String transcationHistory[]=new String[10];
-	Scanner sc=new Scanner(System.in);
+	java.util.Scanner sc=new java.util.Scanner(System.in);
 	int taxCount=0;
 	
 	@Override
@@ -33,6 +33,7 @@ public class BankAccount  implements BankOperation{
 	public void taxHistory(String message) {
 		if (taxCount<transcationHistory.length) {
 			transcationHistory[taxCount]=message;
+			taxCount++;
 		}
 	}
 	@Override
@@ -41,6 +42,47 @@ public class BankAccount  implements BankOperation{
 			return true;
 		}
 		return false;
+	}
+	@Override
+	public void deposite(double amount) {
+		if (active && amount>0) {
+			this.balance=this.balance+amount;
+			taxHistory("Amount Deposited "+amount);
+			System.out.println("💰"+amount +" Deposited Succesfully!");
+		} else {
+			System.out.println("⚠️ Invalid Deposite Amount !");
+		}
+		
+	}
+	@Override
+	public void withdraw(double amount) {
+		if (active  && amount>0 && amount<=balance) {
+			this.balance=this.balance-amount;
+			taxHistory("Amount Withdrwan "+amount);
+			System.out.println("💸"+amount +" Withdrawn Succesfully!");
+		} else {
+			System.out.println("⚠️ Insufficient balance or Invalid request !");
+		}
+		
+	}
+	@Override
+	public void diplayDetails() {
+		if (active) {
+			System.out.println("=======Account Details=======");
+			System.out.println("Account No : "+this.accNumber);
+			System.out.println("Name       : "+this.holderName);
+			System.out.println("Balance    : "+this.balance);
+		}
+	}
+	@Override
+	public void miniStatement() {
+		if (active) {
+			System.out.println("🧾 Mini Statement : ");
+			for (int i = 0; i < taxCount; i++) {
+				System.out.println((1+i)+" : "+transcationHistory[i]);
+			}
+		}
+		
 	}
 	
 }

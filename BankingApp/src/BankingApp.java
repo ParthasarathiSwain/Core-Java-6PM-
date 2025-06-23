@@ -31,6 +31,7 @@ public class BankingApp {
 					System.out.println("Login Successfully !");
 				} else {
 					System.out.println("Login Failed!");
+					break;
 				}
 				int opt;
 				while(true) {
@@ -46,19 +47,23 @@ public class BankingApp {
 					
 					switch (opt) {
 					case 1:{
-						System.out.println("Deposite");
+						System.out.println("Enter Amount : ");
+						double amount=sc.nextDouble();
+						userAcc.deposite(amount);
 						break;
 					}
 					case 2:{
-						System.out.println("withdrawl");
+						System.out.println("Enter Amount : ");
+						double amount=sc.nextDouble();
+						userAcc.withdraw(amount);
 						break;
 					}	
 					case 3:{
-						System.out.println("details");
+						userAcc.diplayDetails();
 						break;
 					}	
 					case 4:{
-						System.out.println("mini-s");
+						userAcc.miniStatement();
 						break;
 					}
 					case 5:{
