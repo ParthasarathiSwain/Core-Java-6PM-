@@ -84,5 +84,21 @@ public class BankAccount  implements BankOperation{
 		}
 		
 	}
+	@Override
+	public void deleteAccount() {
+		accNumber=null;
+		holderName=null;
+		pin=null;
+		balance=0;
+		active=false;
+		transcationHistory=new String[10];
+		System.out.println("Account Deleted Successfully");
+	}
+	@Override
+	public String toString() {
+		return "[accNumber=" + accNumber + ", holderName=" + holderName + ", balance=" + balance
+				+ ", active=" + active + ", sc=" + sc + "]";
+	}
+	
 	
 }

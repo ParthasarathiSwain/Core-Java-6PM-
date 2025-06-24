@@ -67,11 +67,12 @@ public class BankingApp {
 						break;
 					}
 					case 5:{
-						System.out.println("Delete Acc");
+						userAcc.deleteAccount();
+						opt=6;
 						break;
 					}
 					case 6:{
-						System.out.println("logout");
+						System.out.println("logout Successfully!");
 						break;
 					}
 					default:
@@ -81,7 +82,8 @@ public class BankingApp {
 				}
 			}
 			case 3: {
-				System.out.println("show all account");
+				System.out.println("*******All Accounts*******");
+				bank.getAllAccout();
 				break;
 				
 			}

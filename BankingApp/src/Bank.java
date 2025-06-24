@@ -21,4 +21,11 @@ public class Bank {
 		}
 		 return null;
 	 }
+	 public void getAllAccout() {
+		 for (int i = 0; i < count; i++) {
+			System.out.println("Account "+(i+1)+" Details");
+			System.out.println(accounts[i]);
+			System.out.println("");
+		}
+	 }
 }

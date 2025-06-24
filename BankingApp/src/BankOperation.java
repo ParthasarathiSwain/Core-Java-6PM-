@@ -6,4 +6,6 @@ public interface BankOperation {
 	void withdraw(double amount);
 	void diplayDetails();
 	void miniStatement();
+	void deleteAccount();
+	
 }
