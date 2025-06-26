@@ -1,11 +1,18 @@
-package StringHandling;
+
 
 public class Test02 {
 	public static void main(String[] args) {
+
+		String ss="HY";
+		System.out.println(ss.length());
+		StringBuffer sb=new StringBuffer("qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq");
+		System.out.println(sb.capacity());
+
+
 		String s1="hy";
 		String s2="hy";
 //		System.out.println(s1==s2);//true //== operator always checks addresses in String
-		System.out.println(s1.equals(s2)); //true
+//		System.out.println(s1.equals(s2)); //true
 		
 		String s3=new String();
 //		System.out.println(s1==s3); //false

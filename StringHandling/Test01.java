@@ -3,9 +3,7 @@ package StringHandling;
 public class Test01 {
 	public static void main(String[] args) {
 		/*
-		 	The String class represents character strings. Allstring literals in Java programs, such as "abc", are implemented as instances of this class. 
-
-			Strings are constant; their values cannot be changed after they are created. String buffers support mutable strings.Because String objects are immutable they can be shared. For example: 
+		 	The String class represents character strings. Allstring literals in Java programs, such as "abc", are implemented as instances of this class. Strings are constant; their values cannot be changed after they are created. String buffers support mutable strings.Because String objects are immutable they can be shared. For example: 
 
      		String str = "abc";
 		 */
